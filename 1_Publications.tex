@@ -1,0 +1,49 @@
+%% SPECIFY LUATEX AS THE ENGINE %%
+
+\documentclass[11pt,a4paper]{article}
+
+%% FORMATTING TEXT %%
+
+\usepackage[left=1.27cm, right=1.27cm, top=1.27cm, bottom=1.27cm]{geometry}
+\usepackage{fontspec}
+\setmainfont{Times New Roman}
+\usepackage{setspace}
+\setstretch{1.2}
+\usepackage{ragged2e}
+\usepackage{lipsum}
+\usepackage{soul}
+
+%% CUSTOMIZE THE SPACING FOR SECTION TITLES %%
+
+\usepackage{titlesec}
+\titleformat{\section}[block]{\normalfont\Large\bfseries}{\thesection}{2em}{} 
+\titlespacing*{\section}{0pt}{-1.5cm}{1ex}
+
+%% HYPERLINKS %%
+
+\usepackage{hyperref}
+\hypersetup{
+  colorlinks=true,  
+  linkcolor=blue,  
+  urlcolor=blue     
+}
+
+%%%
+
+\title{\textbf{PUBLICATIONS}}
+\date{} % Remove the date
+
+%%%
+
+%% WHERE THE MAGIC HAPPENS %%
+
+%%%
+
+\begin{document}
+
+\maketitle
+
+\input{2_ScientificPapers}
+\input{3_Others}
+
+\end{document}
